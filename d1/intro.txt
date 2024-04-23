@@ -1,0 +1,75 @@
+Python(Program) file...
+	consist of functions, classes and variables (Data)
+	
+	if these functions, classes and data from one python file 
+	has to be used in another python file,
+	here the one to be used is referred to as a module.
+
+	Every Python file is a module which can be used in other python
+	program files by using import statements.
+
+	In simple terms, we can consider a module to be same as,
+	a code library or a file containing functions(classes/data),
+	that you want to include in your program/app.
+
+	Different ways of using import:
+	1. import moduleIntro
+	2. from moduleIntro import *
+	3. from moduleIntro import funOne, dataOne
+	4. import moduleIntro as mi
+
+=============================================================================
+
+	Note: In a module, when we run the entire module directly using:
+	python3 modulename.py
+	Then, the "__name__" inside that module becomes "__main__"
+	But when we use that module inside some another python program,
+	Then, the "__name__" inside that module becomes "modulename"
+	Therefore, when we want to run a module directly,
+	we can have a if condition like:
+	if __name__ == "__main__":
+		# do something
+
+	python creates cache files in __pycache__ which contains .pyc files
+	if you notice, these are cpython files.
+	They are bytecode files which are generated after compilation.
+	They are stored in cache so that they are easy to import and execute.
+
+
+=============================================================================
+
+	Collection of modules (Python files) is a package (folder):
+
+	1. import myPkg.moduleIntro
+	2. import myPkg.moduleIntro as mp
+	3. from myPkg.moduleIntro import *
+	4. from myPkg.moduleIntro import funOne, dataOne
+	5. from myPkg import moduleIntro
+	6. from myPkg import moduleIntro as mi 
+
+=============================================================================
+	
+	Note:
+	some additional functions that you can execute in python shell:
+	
+	like for example:
+
+	dir(modulename) -> gives full list of functions and data that you can access by importing that module.
+	doc(modulename) -> gives documentation of the module
+	print(modulename.__doc__) -> prints only comments in that module
+
+
+=============================================================================
+
+	we can view processor info by using:
+	
+	cat /proc/cpuinfo
+
+	to find number of processors:
+	cat/proc/cpuinfo | grep 'processors'
+
+=============================================================================
+
+	Module: multiprocessing
+		This module gives/provides/supports process based parallelism.
+		
