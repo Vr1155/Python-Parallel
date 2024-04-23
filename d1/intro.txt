@@ -73,3 +73,82 @@ Python(Program) file...
 	Module: multiprocessing
 		This module gives/provides/supports process based parallelism.
 		
+		Pool class in Multiprocess...
+			Pool is a collection of multiple process....
+		
+			rather than creating objects (of Process) and
+			then starting and joining ...
+
+			We can avoid all those things here using the Pool class
+	
+		map function ---> have you come across this function in Python?
+		Ans: No.
+
+		map() maps a function to an iterator...
+			anything which is a collection or which can be used in a loop,
+			such objects are called iterable objects.
+
+		map(fun, [1,2,3,4,5,6])
+			---> this is what map will do. 
+				i.e., fun() is called for each value in the list.
+
+		Pool class provides its own map() so to enable mapping of data,
+		to the child(new) processes ... collect the result of each processes,
+		and return the list of results of all child processes.
+
+
+	Each process
+		main
+		|
+		|	 Process Object
+		|	 pObj.start()
+		|----------
+		|	  |
+		V	  V
+		Parent	  Child
+
+
+
+
+	Since, each process has its own resources.. like, ids(pid, ppid, uid, 
+	euid, gid, egid).. files opened, data ...
+	If more than one process wants to work with other processes to achieve,
+	there should be some mode of communications.
+
+	In UNIX/Linux environment, we call them IPC (Inter-Process Communication).
+
+	Inter-process communication:
+		The passing of data between processes in execution,
+		is called "Inter-process communication."
+
+	There are different modes of IPC:
+		1. pipes
+			named
+			unnamed
+		2. signals (software interrupts)
+		3. Sys V IPC (System 5)
+			--> message queues
+			--> shared memory
+			--> Semaphores
+		4. POSIX IPC
+			--> message queues
+			--> shared memory
+			--> Semaphores
+		5. Memory mapping
+		6. File locking
+		7. Sockets
+		
+	Python multiprocessing module provides some channels like:
+		-> Queue class
+		-> Pipe class
+	
+	Let us see a simple program using Queue as an IPC.
+
+
+	Go through pydocs, go through pipes, pool executor, 
+	message queues and multithreading in python.
+
+	Tommorow, we will do multi-threading in python.
+	
+
+
