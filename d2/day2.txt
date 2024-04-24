@@ -1,0 +1,161 @@
+day 3:
+======
+
+Pipes for message passing in multiprocessing:
+
+	You have already seen pipe operator in bash shell:
+	for eg: ls -l | more -5
+	Explanation: ls -l ---> command#1 ---> process #1
+			This command#1 writes into the pipe (|)
+		     more -5 ---> command#2 ---> process #2
+			this command#2 takes/reads from the pipe (|)
+			and the final output is displayed in terminal.
+	
+	In the same way, we can mix and match the "more -5" with other commands as well.
+
+	-----------------------------------------------------------------------------
+
+	Similarly, we will see pipes in python parallel programming.
+	
+	In multiprocess module, there is class called Pipe.
+		--> send(data to the pipe) --> perform write operation
+		--> recv(data from the pipe) --> performs read operation
+
+	See: mpPipeOne.py for more info.
+
+========================================================================================
+
+Introduction to MultiThreading in Python:
+
+	Yesterday we discussed on multiprocessing...
+	
+	Within individual process, you can have multiple execution control flows.
+	This is basically dividing the process into multiple sub-tasks,
+	which can be executed concurrently.
+
+	In other words, Multi-Threading is a programming technique,
+	that allows you to run multiple threads (control flow/tasks) simultaneously.
+
+	People talk... 
+		Your program achieve some tasks...
+			---> 	we look at these task from your 
+			    	program utilization of your computer resources.
+				
+				Among the various resource ...
+					---> CPU
+					---> I/O --> Console, DiskIO, Network
+
+	-----------------------------------------------------------
+	
+	Multi-Programming:
+		more than one program/process running simultaneously in single core machine.
+	Multi-Processing:
+		more than one program/process running simultaneously in multi core machine.
+	Multi-Threading:
+		Within each program/process, you can have multiple execution of control flow.
+		This is basically dividing the process into multiple sub-tasks which can be
+		executed concurrently. 
+		That is why threads are also referred to LWP (Light Weight Process)
+
+	-----------------------------------------------------------
+
+	Why ONLY Multi-Processing is not preferred for CPU intensive jobs?
+	Ans: 
+		In web-servers, there are 100,000s of clients.
+		Creating separate process for each of these clients will,
+		put a massive burden on CPU, RAM and scheduler.
+
+		On the other hand, a thread is a lightweight process,
+		and it also has some shared memory which makes it less
+		memory intensive. 
+		Also threads are more scalable memory-wise 
+		if a thread requires more memory it can simply take more memory
+		from the shared memory.
+		Moreover, in multi-processing, each process gets some fixed memory.		
+	
+		Therefore, a combination of Multi-Threading and 
+		Multi-Processing is preferred in those cases.
+		For eg: 1 process for every 100 clients.
+	
+		The main goal is maximum utilization of system resources
+		and maximum efficiency.
+
+		Therefore, accordingly we have to choose multi-threading 
+		and multi-processing.
+
+	
+	Multi-Threading can be used to improve the performance, of your
+	application because it allows to take advantage of the multiple
+	cores in your CPU.
+
+	Python Multi-Threading library is loosely built on concepts of 
+	threads provided by Java.
+
+	-------------------------------------------------------
+
+	What is Global Interpreter Lock (GIL)?
+
+		Global Interpreter Lock...
+			
+			Python Interpreter establishes a lock (like a mutex)
+			on the code it interprets.
+			So it interprets one code at a time.
+			Because of this the integrity of your Python Interpreter is maintained.
+
+			GIL is a mutex (Mutually Exclusive) lock that prevents multiple threads,
+			from executing Python bytecode at once.
+
+			This ensures Python data structures are not corrupted by multiple threads
+			simultaneously accessing and modifying them.
+
+			GIL will stop user from using multi-threading but it will not stop user
+ 			from doing multi-processing.
+
+		-----------------------------------------
+
+		Lot of people argue that this (GIL) puts limitation
+		on multi-threaded code execution in Python.
+
+		However,
+		You can use python libraries written in C/C++ to bypass the GIL,
+		for multi-threading in python.
+		Remember that python can run files written in C/C++ and there are
+		multiple multi-threading libraries for C/C++ for various platforms,
+		like for POSIX thread (pthreads) for Linux.
+		
+		
+		-----------------------------------------
+			
+		See program mtOne.py and mtTwo.py
+		if you notice, some time is allocated for each thread so you see 
+		multiple 'X' together for some time and then multiple 'O' together for some time.
+		This is done by thread scheduling algorithm in python.
+
+		for more info on multi-threading in python see: 
+		https://docs.python.org/3/library/threading.html
+
+		-----------------------------------------
+
+		for a quick refresher on command line arguments in python see:
+		cmdLineOne.py
+
+		first argument is always the file name 
+		from 2nd argument onwards till nth argument, 
+		we will have all the arguments in a list called argv.
+		for eg:
+		python3 cmdLineOne.py 100 200 
+		Here, cmdLineOne.py is the 1st argument.
+		100 is the 2nd argument.
+		200 is the 3rd argument.
+
+	=====================================================================
+
+		Assignment Questions: 
+
+		Note: Instructor prefers command line args (argv) for both of these tasks.
+
+		1. Create a list with some 100 random values using random module,
+		and use bubble sort to sort the contents of the list.
+		2. Fibonacci series (entire series till nth term) using recursion.
+
+		Tommorow, we will try to do these algorithms using multi-threading.
