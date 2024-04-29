@@ -1,6 +1,4 @@
-#!/c/Users/ADMIN/AppData/Local/Microsoft/WindowsApps/python3
-
-# #!/usr/bin/python3
+#!/usr/bin/python3
 
 from sys import stdout, stderr
 
