@@ -1,0 +1,19 @@
+total 56
+-rwxr-xr-x. 1 shivani shivani  76 Apr 29 02:18 test.py
+drwxr-xr-x. 2 shivani shivani  34 Apr 29 02:19 __pycache__
+-rwxr-xr-x. 1 shivani shivani 253 Apr 29 02:23 parsl_config.py
+-rw-r--r--. 1 shivani shivani 253 Apr 29 02:44 output
+-rw-r--r--. 1 shivani shivani  40 Apr 29 02:44 myerror
+-rwxr-xr-x. 1 shivani shivani 145 Apr 29 02:50 myPython.py
+-rw-r--r--. 1 shivani shivani  24 Apr 29 02:51 myoutput
+-rw-r--r--. 1 shivani shivani  23 Apr 29 02:51 myerror1
+-rwxr-xr-x. 1 shivani shivani 297 Apr 29 03:00 myBash.py
+-rw-r--r--. 1 shivani shivani  69 Apr 29 03:00 fileTwo.txt
+-rw-r--r--. 1 shivani shivani  12 Apr 29 03:00 fileOne.txt
+-rw-r--r--. 1 shivani shivani  12 Apr 29 03:03 testOne.c
+-rwxr-xr-x. 1 shivani shivani  71 Apr 29 03:04 testOne.py
+-rw-r--r--. 1 shivani shivani   0 Apr 29 03:10 myhistory
+-rwxr-xr-x. 1 shivani shivani 285 Apr 29 03:11 myBashOne.py
+drwxr-xr-x. 6 shivani shivani  50 Apr 29 03:11 runinfo
+-rw-r--r--. 1 shivani shivani  58 Apr 29 03:11 fileout.txt
+-rw-r--r--. 1 shivani shivani   0 Apr 29 03:11 filein.txt

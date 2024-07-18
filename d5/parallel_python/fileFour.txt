@@ -1,0 +1,3 @@
+--> executable follows <--
+echo "Coding for fun"; ls -lrt
+--> end executable <--

@@ -1,0 +1,3 @@
+--> executable follows <--
+ls -lrt
+--> end executable <--
