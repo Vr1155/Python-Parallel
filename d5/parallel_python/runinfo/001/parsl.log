@@ -1,0 +1,35 @@
+1714374001.362643 2024-04-29 03:00:01 MainProcess-3320 MainThread-140668412438336 parsl.dataflow.dflow:91 __init__ INFO: Starting DataFlowKernel with config
+Config(
+    app_cache=True, 
+    checkpoint_files=None, 
+    checkpoint_mode=None, 
+    checkpoint_period=None, 
+    executors=(ThreadPoolExecutor(
+        label='threads', 
+        max_threads=2, 
+        storage_access=None, 
+        thread_name_prefix='', 
+        working_dir=None
+    ),), 
+    garbage_collect=True, 
+    initialize_logging=True, 
+    internal_tasks_max_threads=10, 
+    max_idletime=120.0, 
+    monitoring=None, 
+    retries=0, 
+    retry_handler=None, 
+    run_dir='runinfo', 
+    strategy='simple', 
+    strategy_period=5, 
+    usage_tracking=False
+)
+1714374001.362841 2024-04-29 03:00:01 MainProcess-3320 MainThread-140668412438336 parsl.dataflow.dflow:93 __init__ INFO: Parsl version: 2024.04.22
+1714374001.362937 2024-04-29 03:00:01 MainProcess-3320 MainThread-140668412438336 parsl.usage_tracking.usage:111 __init__ DEBUG: Tracking status: False
+1714374001.363123 2024-04-29 03:00:01 MainProcess-3320 MainThread-140668412438336 parsl.dataflow.dflow:121 __init__ INFO: Run id is: 38df55d4-ac57-4a84-b9b8-7d6a3cbe1b12
+1714374001.398237 2024-04-29 03:00:01 MainProcess-3320 MainThread-140668412438336 parsl.dataflow.dflow:128 __init__ DEBUG: Considering candidate for workflow name: /home/shivani/.local/lib/python3.9/site-packages/parsl/dataflow/dflow.py
+1714374001.398321 2024-04-29 03:00:01 MainProcess-3320 MainThread-140668412438336 parsl.dataflow.dflow:128 __init__ DEBUG: Considering candidate for workflow name: /home/shivani/.local/lib/python3.9/site-packages/parsl/dataflow/dflow.py
+1714374001.398348 2024-04-29 03:00:01 MainProcess-3320 MainThread-140668412438336 parsl.dataflow.dflow:128 __init__ DEBUG: Considering candidate for workflow name: /home/shivani/cdac/parallel_python/./myBash.py
+1714374001.398372 2024-04-29 03:00:01 MainProcess-3320 MainThread-140668412438336 parsl.dataflow.dflow:134 __init__ DEBUG: Using myBash.py as workflow name
+1714374001.398481 2024-04-29 03:00:01 MainProcess-3320 MainThread-140668412438336 parsl.dataflow.memoization:163 __init__ INFO: App caching initialized
+1714374001.398547 2024-04-29 03:00:01 MainProcess-3320 MainThread-140668412438336 parsl.jobs.strategy:145 __init__ DEBUG: Scaling strategy: simple
+1714374001.399606 2024-04-29 03:00:01 MainProcess-3320 MainThread-140668412438336 parsl.dataflow.dflow:1188 atexit_cleanup WARNING: Python is exiting with a DFK still running. You should call parsl.dfk().cleanup() before exiting to release any resources

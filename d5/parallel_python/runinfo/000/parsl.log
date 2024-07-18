@@ -1,0 +1,46 @@
+1714371794.262909 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:91 __init__ INFO: Starting DataFlowKernel with config
+Config(
+    app_cache=True, 
+    checkpoint_files=None, 
+    checkpoint_mode=None, 
+    checkpoint_period=None, 
+    executors=(ThreadPoolExecutor(
+        label='threads', 
+        max_threads=2, 
+        storage_access=None, 
+        thread_name_prefix='', 
+        working_dir=None
+    ),), 
+    garbage_collect=True, 
+    initialize_logging=True, 
+    internal_tasks_max_threads=10, 
+    max_idletime=120.0, 
+    monitoring=None, 
+    retries=0, 
+    retry_handler=None, 
+    run_dir='runinfo', 
+    strategy='simple', 
+    strategy_period=5, 
+    usage_tracking=False
+)
+1714371794.263217 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:93 __init__ INFO: Parsl version: 2024.04.22
+1714371794.263371 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.usage_tracking.usage:111 __init__ DEBUG: Tracking status: False
+1714371794.263675 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:121 __init__ INFO: Run id is: 1fda3594-2b63-4357-a2a8-9811f331612e
+1714371794.290513 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:128 __init__ DEBUG: Considering candidate for workflow name: /home/shivani/.local/lib/python3.9/site-packages/parsl/dataflow/dflow.py
+1714371794.290611 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:128 __init__ DEBUG: Considering candidate for workflow name: /home/shivani/.local/lib/python3.9/site-packages/parsl/dataflow/dflow.py
+1714371794.290637 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:128 __init__ DEBUG: Considering candidate for workflow name: /home/shivani/cdac/parallel_python/./parsl_config.py
+1714371794.290659 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:134 __init__ DEBUG: Using parsl_config.py as workflow name
+1714371794.290864 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.memoization:163 __init__ INFO: App caching initialized
+1714371794.290968 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.jobs.strategy:145 __init__ DEBUG: Scaling strategy: simple
+1714371794.295730 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:997 submit DEBUG: Task 0 will be sent to executor threads
+1714371794.295848 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:789 _add_output_deps DEBUG: Adding output dependencies
+1714371794.335236 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:1079 submit INFO: Task 0 submitted for App myFun, not waiting on any dependency
+1714371794.335455 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:1085 submit DEBUG: Task 0 set to pending state with AppFuture: <AppFuture at 0x7f515f3e28b0 state=pending>
+1714371794.335507 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.memoization:222 check_memo DEBUG: Task 0 will not be memoized
+1714371794.335743 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:747 launch_task INFO: Parsl task 0 try 0 launched on executor threads
+1714371794.335779 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:1426 log_std_stream INFO: Standard out for task 0 will not be redirected.
+1714371794.335801 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:1426 log_std_stream INFO: Standard error for task 0 will not be redirected.
+1714371794.335841 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:572 _complete_task INFO: Task 0 completed (launched -> exec_done)
+1714371794.335875 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:1426 log_std_stream INFO: Standard out for task 0 will not be redirected.
+1714371794.335909 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:1426 log_std_stream INFO: Standard error for task 0 will not be redirected.
+1714371794.336098 2024-04-29 02:23:14 MainProcess-2981 MainThread-139987749594944 parsl.dataflow.dflow:1188 atexit_cleanup WARNING: Python is exiting with a DFK still running. You should call parsl.dfk().cleanup() before exiting to release any resources
